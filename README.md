@@ -52,3 +52,25 @@ export default tseslint.config({
   },
 })
 ```
+
+# Deployment: GitHub Pages
+
+This project is ready for free static hosting using GitHub Pages.
+
+## Steps
+
+1. **Push your code to a GitHub repository named `rep-timer`.**
+2. **Edit `package.json`:**
+   - Replace `<your-github-username>` in the `homepage` field with your actual GitHub username.
+3. **Deploy:**
+   - Run:
+     ```sh
+     npm run deploy
+     ```
+   - This will build the app and publish it to the `gh-pages` branch.
+4. **Access your app:**
+   - Visit: `https://<your-github-username>.github.io/rep-timer/`
+
+## Notes
+- The Vite config is set up for correct asset paths on GitHub Pages.
+- You can redeploy any time by running `npm run deploy` again.
