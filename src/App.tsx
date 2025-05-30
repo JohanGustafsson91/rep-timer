@@ -1,20 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import "./App.css";
 
-function shouldMarkFirstRepImmediately({
-  running,
-  timeLeft,
-  currentRep,
-  totalSeconds,
-}: {
-  running: boolean;
-  timeLeft: number;
-  currentRep: number;
-  totalSeconds: number;
-}) {
-  return running && currentRep === 0 && timeLeft === totalSeconds;
-}
-
 export default function App() {
   const [totalSeconds, setTotalSeconds] = useState(60);
   const [reps, setReps] = useState(5);
@@ -282,6 +268,20 @@ export default function App() {
       )}
     </div>
   );
+}
+
+function shouldMarkFirstRepImmediately({
+  running,
+  timeLeft,
+  currentRep,
+  totalSeconds,
+}: {
+  running: boolean;
+  timeLeft: number;
+  currentRep: number;
+  totalSeconds: number;
+}) {
+  return running && currentRep === 0 && timeLeft === totalSeconds;
 }
 
 function formatTime(seconds: number) {
