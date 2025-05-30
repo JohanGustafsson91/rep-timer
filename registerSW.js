@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/rep-timer/sw.js', { scope: '/rep-timer/' })})}
